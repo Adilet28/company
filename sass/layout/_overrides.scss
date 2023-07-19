@@ -1,0 +1,71 @@
+// Suggested location to add your overrides so that migration would be easy by just updating the SASS folder in the future
+body{
+  background: white;
+}
+a {
+  outline: none !important;
+  box-shadow: none !important;
+  color: var(--primary-color);
+}
+
+button {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.p-radiobutton {
+  margin-right: 5px;
+}
+
+.field-radiobutton {
+  margin-top: 10px;
+}
+.p-menubar {
+  border: none;
+  border-radius: 0;
+  background: white;
+
+}
+.p-focus:active{
+  background: none;
+}
+.p-component {
+  font-family: "Philosopher", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+}
+.p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-content {
+  position: relative;
+  &::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    position: absolute;
+    display: block;
+    left: 50%;
+    transform: translateX(-50%);
+    top: calc(100% + 8px);
+    background: #5bbdbe;
+    transition: .4s ease-in-out;
+  }
+}
+.p-menubar .p-menubar-root-list > .p-menuitem:not(.p-highlight):not(.p-disabled) > .p-menuitem-content:hover {
+  background: none;
+  & .p-menuitem-link:hover{
+    color: #5bbdbe !important;
+  }
+  &::after{
+    width: 100%;
+  }
+}
+.p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-content .p-menuitem-link .p-menuitem-text{
+  color: #5e74b7;
+}
+.p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-content:hover .p-menuitem-link .p-menuitem-text {
+    color: #5bbdbe !important;
+}
+.p-icon {
+  width: 20px;
+  height: 20px;
+  color: #5e74b7 !important;
+}
